@@ -1,0 +1,31 @@
+.firstDiv{
+    color:blue;
+}
+
+.secondDiv{
+color:red;
+}
+
+#singledout{
+    color:green;
+    text-decoration: line-through;
+}
+
+h3  + ul{ /* ul after h3 */
+    border: 4px dotted purple;
+}
+
+li a{ /* a inside li */
+    color: red;
+}
+
+li a[href="https://9gag.com/"]{ /* a with given href attribute inside li */
+    color:blue;
+    border: 5px solid orange;
+}
+
+/*asterisk chooses all
+*{   
+    color:black;
+}
+*/ 

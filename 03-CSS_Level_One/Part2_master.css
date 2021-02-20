@@ -1,0 +1,24 @@
+
+
+
+/*this is comment*/
+
+body{
+    background: url(https://warfarehistorynetwork.com/wp-content/uploads/Swiss-Pike-2.jpg);
+    background-repeat: repeat;
+}
+div{
+    background: blue;
+    border-color: orange;
+    border-width: 4 px;
+    border-style: double;
+
+}
+
+p{
+    color:yellow;
+}
+span{
+    background: red;
+    color:black
+}

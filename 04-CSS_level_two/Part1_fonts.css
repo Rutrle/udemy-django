@@ -1,0 +1,21 @@
+h1{
+    font-family: 'Ballet', cursive;
+    text-align: center;
+}
+
+p{
+    font-family: monospace;
+    font-style: italic;
+    font-weight: bold;
+}
+
+body{
+    /*font-size: 20px; one posibility, not used very much for each tag separately, rather just once in body and then with em*/
+
+    font-size: 20 px;
+}
+
+#two{
+    font-size:1.0em;
+}
+

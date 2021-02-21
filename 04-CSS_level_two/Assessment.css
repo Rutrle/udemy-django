@@ -1,0 +1,54 @@
+h1{
+    font-family: 'UnifrakturMaguntia', cursive;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+td{
+    height: 400px;
+    padding: 50px;
+    border: white solid 10px;
+    
+
+}
+
+#first{
+    padding: 50px;
+
+    background:#F94144;
+}
+#second{
+    background:#F3722C;
+}
+#third{
+    background:#F8961E;
+}
+#fourth{
+    background:#F9844A;
+}
+#fifth{
+    background:#F9C74F;
+}
+#sixth{
+    background:#90BE6D;
+}
+#seventh{
+    background:#43AA8B;
+}
+#eight{
+    background:#4D908E;
+}
+#ninth{
+    background:#577590;
+}
+#tenth{
+    background:#277DA1;
+}

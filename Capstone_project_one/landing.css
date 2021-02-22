@@ -1,16 +1,39 @@
 body{
-    background: rgb(1, 1, 51);
-    border: 40px solid black;
+    background: rgb(26, 30, 95);
+    border: 40px solid rgb(196, 166, 31);
     border-top: 0px;
     text-align: center;
-    margin: 10px 0px 0px 0px;
+    margin: 0px;
     color: white;
+    font-family: 'Stick', sans-serif;
+    
+    
 }
 
 h1{
     text-align: center;
 }
 p{
-    margin: 100px 200px 100px 200px;
+    margin: 80px 200px 80px 200px;
+}
+form{
+    font-size: 1.5em;
+}
+input{
+    margin: 10px;
+    font-size: 1em;
+      
+}
+
+#bigbutton{
+    background-color: #c56f1e;
+    border-radius: 40px;
+    padding:10px;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: 'Stick', sans-serif;
+    margin:20px;
+
+
 }
 

@@ -71,7 +71,11 @@ function monkeyTrouble(aSmile, bSmile) {
 // stringTimes("Hi", 1) → "Hi"
 
 function stringTimes(str, n) {
-  //Code Goes Here
+  var final_string = ""
+  for (var i = 0; i < n; i++) {
+    final_string = final_string + str
+  }
+  return final_string
 }
 
 // PROBLEM 4: LUCKY SUM
@@ -89,8 +93,16 @@ function stringTimes(str, n) {
 // luckySum(1, 13, 3) → 1
 
 function luckySum(a, b, c) {
-
-  //Code Goes Here
+  if (a === 13) {
+    a = 0
+  }
+  if (b === 13) {
+    b = 0
+  }
+  if (c === 13) {
+    c = 0
+  }
+  return a + b + c
 }
 
 // PROBLEM 5:
@@ -108,7 +120,15 @@ function luckySum(a, b, c) {
 // caught_speeding(65, true) → 0
 
 function caught_speeding(speed, is_birthday) {
-  //Code Goes Here
+  var ticket = 0
+  if ((speed <= 60) || (speed <= 65 && is_birthday)) {
+    ticket = 0
+  } else if ((speed <= 80) || (speed <= 85 && is_birthday)) {
+    ticket = 1
+  } else if ((speed >= 81) || (speed >= 86 && is_birthday)) {
+    ticket = 2
+  }
+  return ticket
 }
 
 
@@ -126,5 +146,5 @@ function caught_speeding(speed, is_birthday) {
 // makeBricks(3, 2, 10) → true
 
 function makeBricks(small, big, goal) {
-  //Code Goes Here
+  return (((small + big * 5) >= goal) && (goal >= (big * 5) || ((goal % (5)) <= small)))
 }

@@ -57,6 +57,11 @@ function monkeyTrouble(aSmile, bSmile) {
   }
 }
 
+function monkeyTrouble(aSmile, bSmile) {
+  return aSmile === bSmile
+}
+//another possibility:  return  
+
 
 //
 // PROBLEM 3: STRING TIMES
@@ -94,15 +99,16 @@ function stringTimes(str, n) {
 
 function luckySum(a, b, c) {
   if (a === 13) {
-    a = 0
+    return 0
   }
-  if (b === 13) {
-    b = 0
+  else if (b === 13) {
+    return a
   }
-  if (c === 13) {
-    c = 0
+  else if (c === 13) {
+    return a + b
+  } else {
+    return a + b + c
   }
-  return a + b + c
 }
 
 // PROBLEM 5:

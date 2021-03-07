@@ -12,19 +12,16 @@ function Clearboard() {
 
 restart.addEventListener('click', Clearboard)
 
-
-
-
-var boxOne = document.querySelector('#one')
-
-console.log("loaded")
-
-boxOne.addEventListener('click', function () {
-    if (boxOne.textContent === "") {
-        boxOne.textContent = "X";
-    } else if (boxOne.textContent === "X") {
-        boxOne.textContent = "O";
-    } else if (boxOne.textContent === "O") {
-        boxOne.textContent = "";
+function changeMarker() {
+    if (this.textContent === "") {
+        this.textContent = "X";
+    } else if (this.textContent === "X") {
+        this.textContent = "O";
+    } else {
+        this.textContent = "";
     }
-})
+}
+
+for (var i = 0; i < squares.length; i++) {
+    squares[i].addEventListener('click', changeMarker)
+}

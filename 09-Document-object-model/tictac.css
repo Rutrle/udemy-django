@@ -4,5 +4,10 @@ table{
 }
 
 td{
-    border:  black 2px;
+    height: 130px;
+    width:130px;
+    border: solid black 4px;
+    text-align: center;
+    font-size: 90px;
+    
 }

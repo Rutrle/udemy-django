@@ -8,6 +8,7 @@ td{
     width:130px;
     border: solid black 4px;
     text-align: center;
-    font-size: 90px;
+    vertical-align:center;
+    font-size: 80px;
     
 }

@@ -74,8 +74,21 @@ print(stringBits('Hello'))
 
 
 def end_other(a, b):
-    pass
-    # CODE GOES HERE
+    a = a.lower()
+    b = b.lower()
+
+    if len(a) < len(b):
+        a, b = b, a
+
+    for i in range(len(b)):
+        if a[-(len(b)-i)] != b[i]:
+            return False
+    return True
+
+
+print(end_other('Hiabc', 'abc'), end_other(
+    'AbC', 'HiaBc'), end_other('abc', 'abXabc'))
+
 
 #####################
 ## -- PROBLEM 4 -- ##
@@ -89,10 +102,16 @@ def end_other(a, b):
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
 
-def doubleChar(str):
-    pass
-    # CODE GOES HERE
+def doubleChar(old_str):
+    new_str = ""
+    for letter in old_str:
+        new_str = new_str+letter*2
 
+    return new_str
+
+
+    # CODE GOES HERE
+print(doubleChar('The'), doubleChar('AAbb'), doubleChar('Hi-There'))
 
 #####################
 ## -- PROBLEM 5 -- ##
@@ -115,15 +134,25 @@ def doubleChar(str):
 # no_teen_sum(2, 13, 1) → 3
 # no_teen_sum(2, 1, 14) → 3
 
+
 def no_teen_sum(a, b, c):
-    pass
-    # CODE GOES HERE
+    return fix_teen(a)+fix_teen(b)+fix_teen(c)
 
 
 def fix_teen(n):
-    pass
-    # CODE GOES HERE
+    teens = (list(range(13, 20)))
+    exceptions = [15, 16]
 
+    if n in teens and n not in exceptions:
+        return 0
+    else:
+        return n
+
+
+print(no_teen_sum(1, 2, 3))
+print(no_teen_sum(2, 13, 1))
+print(no_teen_sum(2, 1, 14))
+print(no_teen_sum(2, 1, 15))
 #####################
 ## -- PROBLEM 6 -- ##
 #####################
@@ -138,5 +167,14 @@ def fix_teen(n):
 
 
 def count_evens(nums):
-    pass
-    # CODE GOES HERE
+    count = 0
+    for item in nums:
+        if item % 2 == 0:
+            count = count+1
+
+    return count
+
+
+print(count_evens([2, 1, 2, 3, 4]),
+      count_evens([2, 2, 0]),
+      count_evens([1, 3, 5]))

@@ -21,7 +21,6 @@ class Deck:
         return cards
 
     def split_deck(self):
-        num_cards = len(self.cards)
         half_one = self.cards[:26]
         half_two = self.cards[26:]
         return half_one, half_two

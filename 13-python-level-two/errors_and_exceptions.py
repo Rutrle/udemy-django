@@ -6,9 +6,8 @@ try:
 except IOError:
     print("ERROR: COULD NOT FIND FILE OR READ DATA!")
 
-else:
-    print("Success!")
-    f.close()
+finally:
+    print("I always work")
 
 
 print('some code after try except')

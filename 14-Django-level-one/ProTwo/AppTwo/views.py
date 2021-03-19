@@ -6,3 +6,8 @@ from django.http import HttpResponse
 
 def indexview(request):
     return HttpResponse('<em>My second app</em>')
+
+
+def help_view(request):
+    context = {"header": "Help page"}
+    return render(request, "help_page.html", context=context)

@@ -15,9 +15,10 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import indexview
+from .views import indexview, help_view
 
 urlpatterns = [
-    path('', indexview, name="index")
+    path('', indexview, name="index"),
+    path('help/', help_view, name="help")
 
 ]

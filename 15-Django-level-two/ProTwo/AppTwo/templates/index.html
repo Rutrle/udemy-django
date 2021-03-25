@@ -8,11 +8,16 @@
 <body>
 
     <h1>Users</h1>
-    <ul>
+    <ol>
         {% for user in users %}
-        <li>{{user.second_name}} {{user.first_name}} {{user.email}}</li>
+        <li>{{user.second_name}} User info
+            <ul>
+                <li>{{user.first_name}}</li>
+                <li>{{user.email}}</li>
+            </ul>
+        </li>
         {% endfor %}
-    </ul>
+    </ol>
 </body>
 
 </html>

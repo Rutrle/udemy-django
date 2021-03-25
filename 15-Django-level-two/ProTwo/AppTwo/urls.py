@@ -18,7 +18,7 @@ from django.urls import path
 from .views import indexview, help_view
 
 urlpatterns = [
-    path('', indexview, name="index"),
+    path('users/', indexview, name="index"),
     path('help/', help_view, name="help")
 
 ]

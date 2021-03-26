@@ -15,10 +15,11 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import indexview, help_view
+from .views import indexview, help_view, input_view
 
 urlpatterns = [
     path('users/', indexview, name="index"),
-    path('help/', help_view, name="help")
+    path('help/', help_view, name="help"),
+    path('input/', input_view, name="userinput")
 
 ]

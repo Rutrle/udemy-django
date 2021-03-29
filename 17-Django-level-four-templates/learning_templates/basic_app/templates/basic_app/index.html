@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 {% extends "basic_app/base.html" %}
+{% load my_extras %}
 {% block body_block %}
 <h1>Welcome to index</h1>
+{{text|my_cut:'hello' }}
+{{number|add:"99"}}
 
 {% endblock body_block %}

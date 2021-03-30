@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class='navbar navbar-light bg-light'>
+        <div class="container">
+            <ul class="container">
+                <li><a class="navbar-brand" href="{% url 'index' %}">DJANGO</a></li>
+                <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+                <li><a class="navbar-link" href="{% url 'basic_app:register' %}">Register</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    {% block body_block %}
+    {% endblock body_block %}
+</body>
+
+</html>

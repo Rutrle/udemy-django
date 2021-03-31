@@ -10,10 +10,16 @@
 <body>
     <nav class='navbar navbar-light bg-light'>
         <div class="container">
-            <ul class="container">
+            <ul class="nav">
                 <li><a class="navbar-brand" href="{% url 'index' %}">DJANGO</a></li>
                 <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
                 <li><a class="navbar-link" href="{% url 'basic_app:register' %}">Register</a></li>
+                {% if user.is_authenticated %}
+                <li><a class="navbar-link" href="{% url 'logout' %}">Logout</a></li>
+                <li><a class="navbar-link" href="{% url 'logout' %}">Secret</a></li>
+                {% else %}
+                <li><a class="navbar-link" href="{% url 'basic_app:user_login' %}">Login</a></li>
+                {% endif %}
 
             </ul>
         </div>

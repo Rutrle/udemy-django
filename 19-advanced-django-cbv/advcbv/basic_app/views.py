@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import (
     View, TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView)
 
+from django.urls import reverse_lazy
 from . import models
 
 
@@ -30,3 +31,8 @@ class SchoolCreateView(CreateView):
 class SchoolUpdateView(UpdateView):
     model = models.School
     fields = ('name', 'principal')
+
+
+class SchoolDeleteView(DeleteView):
+    model = models.School
+    success_url = reverse_lazy("basic_app:list")  # waits until it's evaluated

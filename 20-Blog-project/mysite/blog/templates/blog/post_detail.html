@@ -4,12 +4,12 @@
 <h1 class="posttitle loader">{{post.title}}</h1>
 {% if post.published_date %}
 <div class="date postdate">
-    {{ post.published date}}
+    {{ post.published_date}}
 </div>
 {% else %}
-<a class="btn btn-default" href="{% url 'blog:post_publish' %}">Publish</a>
+<a class="btn btn-dark" href="{% url 'blog:post_publish' pk=post.pk %}">Publish</a>
 {% endif %}
-<p class='postcontent'>{{ post.title|safe|linebreaksbr}}</p>
+<p class='postcontent'>{{ post.text|safe|linebreaksbr}}</p>
 <!--safe makes html tags to not show, it's here because of media library-->
 
 {% if user.is_authenticated %}
@@ -39,7 +39,7 @@
     </a>
 
     {% endif %}
-    <p>{{comment.text|safe|linebreaksbs}}</p>
+    <p>{{comment.text|safe|linebreaksbr}}</p>
     <p>Posted by: {{comment.author}}</p>
     {% endif %}
     {% empty %}

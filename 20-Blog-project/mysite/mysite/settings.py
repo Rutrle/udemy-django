@@ -123,3 +123,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'  # redirect to home page after logging in
+LOGOUT_REDIRECT_URL = '/'  # redirect to home page after logging out

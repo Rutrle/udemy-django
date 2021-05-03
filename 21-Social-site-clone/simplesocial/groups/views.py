@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
 # Create your views here.
-
+from django.db import IntegrityError
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
@@ -14,12 +14,13 @@ class CreateGroup(LoginRequiredMixin, generic.CreateView):
     model = Group
 
 
-class SingleGroup(generic.DeleteView):
+class SingleGroup(generic.DetailView):
     model = Group
 
 
 class ListGroups(generic.ListView):
     model = Group
+    template_name = 'groups/group_list.html'
 
 
 class JoinGroup(LoginRequiredMixin, generic.RedirectView):
@@ -37,7 +38,7 @@ class JoinGroup(LoginRequiredMixin, generic.RedirectView):
             messages.warning(self.request, 'Warning, already a member!')
 
         else:
-            messafe.success(self.request, 'You are now a member!')
+            messages.success(self.request, 'You are now a member!')
 
         return super().get(request, *args, **kwargs)
 
